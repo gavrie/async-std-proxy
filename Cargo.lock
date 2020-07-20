@@ -10,6 +10,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "async-macros"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "futures-core 0.3.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pin-utils 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "async-std"
 version = "1.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -37,8 +46,10 @@ dependencies = [
 name = "async-std-proxy"
 version = "0.1.0"
 dependencies = [
+ "async-macros 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "async-std 1.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.3.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "stop-token 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -385,6 +396,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "stop-token"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "async-std 1.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pin-project-lite 0.1.7 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "syn"
 version = "1.0.34"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -502,6 +522,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [metadata]
 "checksum async-attributes 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "efd3d156917d94862e779f356c5acae312b08fd3121e792c857d7928c8088423"
+"checksum async-macros 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "644a5a8de80f2085a1e7e57cd1544a2a7438f6e003c0790999bd43b92a77cdb2"
 "checksum async-std 1.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "00d68a33ebc8b57800847d00787307f84a562224a14db069b0acefe4c2abbf5d"
 "checksum async-task 3.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "c17772156ef2829aadc587461c7753af20b7e8db1529bc66855add962a3b35d3"
 "checksum autocfg 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "f8aac770f1885fd7e387acedd76065302551364496e46b3dd00860b2f8359b9d"
@@ -548,6 +569,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum slab 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "c111b5bd5695e56cffe5129854aa230b39c93a305372fdbb2668ca2394eea9f8"
 "checksum smol 0.1.18 (registry+https://github.com/rust-lang/crates.io-index)" = "620cbb3c6e34da57d3a248cda0cd01cd5848164dc062e764e65d06fe3ea7aed5"
 "checksum socket2 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)" = "03088793f677dce356f3ccc2edb1b314ad191ab702a5de3faf49304f7e104918"
+"checksum stop-token 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "06855fb7c94d3be9b3a57c4d82dfc8a43bb658fbb3b1dda79de89e748d9eb9dd"
 "checksum syn 1.0.34 (registry+https://github.com/rust-lang/crates.io-index)" = "936cae2873c940d92e697597c5eee105fb570cd5689c695806f672883653349b"
 "checksum unicode-xid 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "f7fe0bb3479651439c9112f72b6c505038574c9fbb575ed1bf3b797fa39dd564"
 "checksum waker-fn 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9571542c2ce85ce642e6b58b3364da2fb53526360dfb7c211add4f5c23105ff7"
